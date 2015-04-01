@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			files: {
-				src: 'js/app.js', // source files mask
+				src: 'public/js/app.js', // source files mask
 				dest: 'public/js/', // destination folder
 				expand: true, // allow dynamic building
 				flatten: true, // remove all unnecessary nesting

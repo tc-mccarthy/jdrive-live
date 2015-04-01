@@ -1,7 +1,8 @@
 var ustream = function(ele){
 	this.ele = ele;
-	$(this.forceAspect);
-	$(window).resize(this.forceAspect);
+	
+	//set the aspect ratio
+	this.forceAspect();
 };
 
 ustream.prototype.forceAspect = function(){

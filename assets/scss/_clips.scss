@@ -1,0 +1,13 @@
+#clips{
+	background-color: #FFF;
+
+	.row{
+		overflow: scroll;
+		height: 90%;
+
+		.clip{
+			margin-bottom: 1em;
+			padding: 10px;
+		}	
+	}
+}

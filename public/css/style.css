@@ -1,0 +1,50 @@
+/*
+* Styles for JDrive Live
+* Author: TC McCarthy
+*/
+/* Pull in page styles */
+/* line 1, ../../assets/scss/_page.scss */
+html, body {
+  font-size: 16px;
+  background-color: #000;
+}
+
+/* line 6, ../../assets/scss/_page.scss */
+.container {
+  width: 95%;
+}
+
+/* Pull in video styles */
+/* line 1, ../../assets/scss/_video.scss */
+.video {
+  width: 100%;
+  border: 0;
+}
+
+/* Styles for clips carousel */
+/* line 1, ../../assets/scss/_clips.scss */
+#clips {
+  background-color: #FFF;
+}
+/* line 4, ../../assets/scss/_clips.scss */
+#clips .row {
+  overflow: scroll;
+  height: 90%;
+}
+/* line 8, ../../assets/scss/_clips.scss */
+#clips .row .clip {
+  margin-bottom: 1em;
+  padding: 10px;
+}
+
+/* Styles for ugc carousel */
+/* line 1, ../../assets/scss/_ugc.scss */
+#ugc {
+  margin-top: 1em;
+}
+/* line 5, ../../assets/scss/_ugc.scss */
+#ugc #carousel div {
+  max-width: 20% !important;
+  float: left;
+  margin-right: 1%;
+}
