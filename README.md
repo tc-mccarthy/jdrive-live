@@ -18,3 +18,4 @@ Intended technologies:
 * jQuery
 * SASS
 * Jade
+* Grunt
