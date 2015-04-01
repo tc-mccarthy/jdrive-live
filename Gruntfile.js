@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			files: {
-				src: 'assets/js/app.js', // source files mask
+				src: 'js/app.js', // source files mask
 				dest: 'public/js/', // destination folder
 				expand: true, // allow dynamic building
 				flatten: true, // remove all unnecessary nesting
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 		concat: {
 			dist:{
 				src: ['assets/js/*.js', '!assets/js/app.js'],
-				dest: 'assets/js/app.js',
+				dest: 'public/js/app.js',
 			}
 		},
 
@@ -34,9 +34,9 @@ module.exports = function(grunt) {
 			target: {
 				files: [{
 					expand: true,
-					cwd: 'css',
+					cwd: 'public/css',
 					src: ['*.css', '!*.min.css'],
-					dest: 'css',
+					dest: 'public/css',
 					ext: '.min.css'
 				}]
 			}
