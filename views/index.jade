@@ -9,9 +9,9 @@ block content
 		div.row
 			div#mainVideo.col-lg-9.col-md-12
 				iframe.video(src="http://www.ustream.tv/embed/" + settings.ustream.videoid + "?v=3&amp;wmode=direct&autoplay=true")
-			div#clips.col-lg-3.hidden-xs.hidden-sm.hidden-md
-				h3 Also from SBU J-Drive
-				div.row
+			div#tweets.col-lg-3.col-md-12
+				h3 #{hashtag}
+				div#tweetContent
 
 		div#ugc.row
 			#carousel.
@@ -34,13 +34,12 @@ block content
 				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 				<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
-	script#clipTemplate(type="text/template").
-		<div class="clip col-md-12">
-			<a href="http://www.youtube.com/watch?v=<%= item.videoID %>">
-				<h4 class="clip_headline"><%= item.title %></h4>
-			</a>
-			<a href="http://www.youtube.com/watch?v=<%= item.videoID %>">
-				<img src="<%= item.thumb %>" class="img-responsive clip_thumb" />
-			</a>
-			<div class="clip_description"><%= jdrive.abridge(item.description, 25) %></div>
+	script#tweetTemplate(type="text/template").
+		<div class="tweet row">
+			<div class="col-md-12 text">
+				<%= jdrive.formatTweet(tweet.text) %>
+			</div>
+			<div class="col-md-7 col-md-offset-5 byline">
+				-- <a href="http://www.twitter.com/<%= tweet.user.screen_name %>">@<%= tweet.user.screen_name %></a>
+			</div>
 		</div>

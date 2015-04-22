@@ -4,7 +4,7 @@ var express = require('express'),
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express', settings: config.app });
+  res.render('index', { title: 'Express', settings: config.app, hashtag: config.twitter.hashtag });
 });
 
 module.exports = router;

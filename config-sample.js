@@ -3,12 +3,18 @@ exports.config = {
 		port: 9000,
 		home: "/",
 		ustream: {
-			videoid: 17149036 //ustream video id
+			videoid:  //ustream video id
+		},
+		twitter: {
+			max: 5
 		}
 	},
 
-	youtube: {
-		api_key: "", //youtube api key
-		playlist: "" //list list ID (for clips reel)
+	twitter: {
+	  consumer_key: '',
+	  consumer_secret: '',
+	  access_token_key: '',
+	  access_token_secret: '',
+	  hashtag: ""
 	}
 };

@@ -4,17 +4,22 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     config = require("./config.js").config,
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    app = express(),
+    http = require('http'),
+    server = http.createServer(app),
+    io = require('socket.io').listen(server),
+    twitter = require('twitter'),
+    tw = new twitter(config.twitter);
 
 var routes = require('./routes/index'),
     api = require('./routes/api');
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.listen(config.app.port);
+server.listen(config.app.port);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -55,6 +60,19 @@ app.use(function(err, req, res, next) {
     res.render('error', {
         message: err.message,
         error: {}
+    });
+});
+
+
+tw.stream("statuses/filter", {"track": config.twitter.hashtag.replace("#", "%23")}, function(s){
+    console.log(config.twitter.hashtag);
+    s.on("data", function(data){
+        console.log(data);
+        io.emit("tweet", JSON.stringify(data));
+    });
+
+    s.on("error", function(err){
+        console.log(err);
     });
 });
 

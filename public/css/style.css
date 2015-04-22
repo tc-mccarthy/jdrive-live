@@ -22,19 +22,21 @@ html, body {
 }
 
 /* Styles for clips carousel */
-/* line 1, ../../assets/scss/_clips.scss */
-#clips {
+/* line 1, ../../assets/scss/_tweets.scss */
+#tweets {
   background-color: #FFF;
+  overflow: hidden;
 }
-/* line 4, ../../assets/scss/_clips.scss */
-#clips .row {
-  overflow: scroll;
+/* line 6, ../../assets/scss/_tweets.scss */
+#tweets #tweetContent .row {
   height: 90%;
 }
-/* line 8, ../../assets/scss/_clips.scss */
-#clips .row .clip {
+/* line 9, ../../assets/scss/_tweets.scss */
+#tweets #tweetContent .row.tweet {
   margin-bottom: 1em;
   padding: 10px;
+  height: 0px;
+  opacity: 0;
 }
 
 /* Styles for ugc carousel */
