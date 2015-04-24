@@ -51,7 +51,7 @@ router.get("/instagram", function(req, res){
 		},
 
 		function(results, cb){
-			memcached.set("insta", results, (config.memcached.timeout * 1000), function(err){
+			memcached.set("insta", results, config.memcached.timeout, function(err){
 				if(err) throw err;
 				cb(null, results);
 			});
@@ -99,7 +99,7 @@ router.get("/twitter", function(req, res){
 		},
 
 		function(results, cb){
-			memcached.set("twitter", results, (config.memcached.timeout * 1000), function(err){
+			memcached.set("twitter", results, config.memcached.timeout, function(err){
 				if(err) throw err;
 				cb(null, results);
 			});
