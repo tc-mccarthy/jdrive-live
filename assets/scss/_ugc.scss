@@ -25,4 +25,7 @@
         }
         img {margin:0 0 6px;}
     }
+    @media (max-width:720px) {
+        img {width:100%;}
+    }
 }

@@ -3,7 +3,7 @@ extends layout
 block content
 	div#banner.row
 			h1
-				img(src="/img/roth-regatta-live-header.jpg", alt="Roth Regatta Live")
+				img(src= "/img/roth-regatta-live-header.jpg", alt="Roth Regatta Live")
 		
 	div.container
 				
@@ -29,7 +29,7 @@ block content
 		</div>
 
 	script#instaTemplate(type="text/template").
-		<div class="col-md-2 insta">
+		<div class="col-md-3 insta">
 			<div class="row">
 				<div class="col-md-12 user">
 					<i class="fa fa-instagram"></i> <%= item.user.username %>

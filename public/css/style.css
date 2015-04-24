@@ -22,6 +22,7 @@ h1 {
 /* line 8, ../../assets/scss/_page.scss */
 img {
   border: none;
+  max-width: 580px;
 }
 
 /* line 9, ../../assets/scss/_page.scss */
@@ -46,7 +47,12 @@ img {
   /* line 12, ../../assets/scss/_page.scss */
   #banner {
     background-position: 0 0;
-    height: 250px;
+  }
+}
+@media (max-width: 590px) {
+  /* line 27, ../../assets/scss/_page.scss */
+  #banner img {
+    width: 100%;
   }
 }
 
@@ -85,21 +91,24 @@ img {
 @media only screen and (max-width: 479px) {
   /* line 1, ../../assets/scss/_tweets.scss */
   #tweets {
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
     margin-bottom: 1em;
   }
 }
-/* line 15, ../../assets/scss/_tweets.scss */
+/* line 12, ../../assets/scss/_tweets.scss */
+#tweets #tweetContent {
+  height: 89%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* line 16, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent a {
   color: #d31823;
 }
-/* line 16, ../../assets/scss/_tweets.scss */
+/* line 17, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row {
   height: 90%;
 }
-/* line 19, ../../assets/scss/_tweets.scss */
+/* line 20, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row.tweet {
   margin-bottom: 1em;
   padding: 14px 10px;
@@ -107,7 +116,7 @@ img {
   opacity: 0;
   overflow: hidden;
 }
-/* line 25, ../../assets/scss/_tweets.scss */
+/* line 26, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row.tweet:nth-child(odd) {
   background: #EFEFEF;
 }
@@ -149,4 +158,10 @@ img {
 /* line 26, ../../assets/scss/_ugc.scss */
 #ugc .insta img {
   margin: 0 0 6px;
+}
+@media (max-width: 720px) {
+  /* line 29, ../../assets/scss/_ugc.scss */
+  #ugc img {
+    width: 100%;
+  }
 }
