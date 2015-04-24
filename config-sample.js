@@ -3,7 +3,7 @@ exports.config = {
 		port: 9000,
 		home: "/",
 		ustream: {
-			videoid:  //ustream video id
+			videoid: 12313488 //ustream video id
 		},
 		twitter: {
 			max: 5
@@ -15,6 +15,16 @@ exports.config = {
 	  consumer_secret: '',
 	  access_token_key: '',
 	  access_token_secret: '',
-	  hashtag: ""
+	  hashtag: "#Isles"
+	},
+
+	memcached: {
+		host: 'localhost',
+		port: 11211
+	},
+
+	instagram: {
+		client_id: '',
+		client_secret: ''
 	}
 };

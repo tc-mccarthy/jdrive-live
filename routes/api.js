@@ -3,7 +3,11 @@ var express = require('express'),
 	config = require("../config.js").config,
 	youtube = require("../lib/youtube.js").youtube,
 	twitter = require("twitter"),
-	tw = new twitter(config.twitter);
+	async = require("async"),
+	Memcached = require("memcached"),
+	memcached = new Memcached(config.memcached.host + ":" + config.memcached.port),
+	tw = new twitter(config.twitter),
+	ig = require('instagram-node').instagram();
 
 //Youtube = new youtube(config.youtube.api_key);
 
@@ -18,13 +22,54 @@ router.get("/getClips", function(req, res){
 	});
 });
 
-router.get("/twitter", function(req, res){
-	tw.stream("statuses/filter", {"track": "slut"}, function(s){
-		s.on("data", function(data){
-			console.log(data);
-		});
+router.get("/instagram", function(req, res){
+	ig.use(config.instagram);
+
+	async.waterfall([
+
+		//check memcached first
+		function(cb){
+			memcached.get('insta', cb);
+		},
+
+		function(data, cb){
+			//if the data isn't in memcached, fetch it from instagram
+			if(typeof data === "undefined"){
+				cb(null);
+			} else{
+				//otherwise, handoff to final callback
+				cb('ok', data);
+			}
+		},
+
+		function(cb){
+			ig.tag_media_recent('isles', [], cb);
+		},
+
+		function(medias, pagination, remaining, limit, cb){
+			cb(null, JSON.stringify(medias));
+		},
+
+		function(results, cb){
+			memcached.set("insta", results, 60, function(err){
+				if(err) throw err;
+				cb(null, results);
+			});
+		}
+	], function(err, data){
+		if(err && err !== 'ok'){
+			throw err;
+		}
+
+		if(err === 'ok'){
+			console.log("From cache");
+		} else{
+			console.log("From API");
+		}
+
+		res.send(data);
 	});
-	//res.send(200);
 });
+
 
 module.exports = router;

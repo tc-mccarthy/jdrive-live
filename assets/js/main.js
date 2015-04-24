@@ -18,6 +18,8 @@ jdrive = {
 		jdrive.tweetsContainer = $("#tweets");
 		jdrive.tweets = $("#tweets #tweetContent");
 		jdrive.mainVideoContainer = $("#mainVideo iframe");
+		jdrive.instagramTemplate = _.template($("#instaTemplate").html());
+		jdrive.instaContainer = $("#ugc");
 	},
 
 	abridge: function(string, wordCount){
@@ -38,6 +40,9 @@ jdrive = {
 			tweet = JSON.parse(data);
 			jdrive.addTweet(tweet);
 		});
+
+		jdrive.getInstagram();
+		setInterval(jdrive.getInstagram, 30 * 1000);
 	},	
 
 	addTweet: function(tweet){
@@ -59,18 +64,13 @@ jdrive = {
 		return text.replace(/(https?[:]\/\/[A-Za-z0-9.\/]+)/g, "<a href='$1'>$1</a>").replace(/#([A-Za-z0-9]+)/g, "<a href='http://www.twitter.com/hashtag/$1'>#$1</a>").replace(/@([A-Za-z0-9]+)/g, "<a href='http://www.twitter.com/$1'>@$1</a>");
 	},
 
-	carousel: function(){
-		$('#carousel').carouFredSel({
-	        items: 4,
-	        auto: false,
-	        circular: true,
-	        infinite: true,
-	        direction: "left",
-
-	        scroll: {
-	            items: 4,
-	        }
-	    });
+	getInstagram: function(){
+		$.getJSON("/api/instagram", function(data){
+			jdrive.instaContainer.html("");
+			_.each(data, function(post){
+				jdrive.instaContainer.append(jdrive.instagramTemplate({item: post}));
+			});
+		});
 	}
 };
 

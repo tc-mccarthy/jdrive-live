@@ -1,11 +1,25 @@
 #ugc{
-	margin-top: 1em;
-	
-	#carousel{
-		div{
-			max-width: 20% !important;
-			float: left;
-			margin-right: 1%;
+
+	text-align: center;
+	.insta{
+		background: #FFF;
+
+		@include border-radius(10px);
+
+		margin-bottom: 1em;
+		margin-right: 1em;
+
+		display: inline-block;
+		text-align: left;
+
+		.caption{
+			height: 120px;
+			overflow: hidden;
+		}
+
+		.user{
+			margin-top: 5px;
+			margin-bottom: 5px;
 		}
 	}
 }

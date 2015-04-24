@@ -1,11 +1,10 @@
 extends layout
 
 block content
+	div#banner.row
+		
 	div.container
-		div.row
-			div.col-md-12
-				h1 Roth Regatta 2015
-
+				
 		div.row
 			div#mainVideo.col-lg-9.col-md-12
 				iframe.video(src="http://www.ustream.tv/embed/" + settings.ustream.videoid + "?v=3&amp;wmode=direct&autoplay=true")
@@ -14,25 +13,7 @@ block content
 				div#tweetContent
 
 		div#ugc.row
-			#carousel.
-				<div>
-					<blockquote class="twitter-tweet col-md-3" lang="en"><p>10 creative ways to promote your blog on social media: <a href="http://t.co/qz2G93jcpt">http://t.co/qz2G93jcpt</a> <a href="http://t.co/XsKGzbVF8k">pic.twitter.com/XsKGzbVF8k</a></p>&mdash; Hootsuite (@hootsuite) <a href="https://twitter.com/hootsuite/status/583135536216424448">April 1, 2015</a></blockquote>
-				</div>
-				<div>
-					<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/0eNk41SYiu/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">Ah yes, #spring is in the air. #snow #lisnow</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by TC McCarthy (@tc_mccarthy) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-21T01:55:22+00:00">Mar 20, 2015 at 6:55pm PDT</time></p></div></blockquote>
-				</div>
-				<div>
-					<blockquote class="twitter-tweet col-md-3" lang="en"><p>70pc of community legal centres have to turn people away because of a lack of resources <a href="http://t.co/GxcAjSMdJf">http://t.co/GxcAjSMdJf</a> <a href="http://t.co/usx1i7RQf0">pic.twitter.com/usx1i7RQf0</a></p>&mdash; ABC News (@abcnews) <a href="https://twitter.com/abcnews/status/583134980324229120">April 1, 2015</a></blockquote>
-				</div>
-				<div>
-					<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/ricwMWyYib/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">Tonight&#39;s #supermoon. The only thing that could pull me away from #sharkweek (only for a sec)</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by TC McCarthy (@tc_mccarthy) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-08-11T00:42:24+00:00">Aug 10, 2014 at 5:42pm PDT</time></p></div></blockquote>
-				</div>
-				<div>
-					<blockquote class="twitter-tweet" lang="en"><p>My fitbit <a href="https://twitter.com/hashtag/Fitstats_en_US?src=hash">#Fitstats_en_US</a> for 3/31/2015: 24,593 steps and 9.5 miles traveled. <a href="http://t.co/JC3DscXxHE">http://t.co/JC3DscXxHE</a></p>&mdash; Chris Abraham (@chrisabraham) <a href="https://twitter.com/chrisabraham/status/583134759108268032">April 1, 2015</a></blockquote>
-				</div>
-			#scripts.
-				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-				<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+			
 
 	script#tweetTemplate(type="text/template").
 		<div class="tweet row">
@@ -41,5 +22,26 @@ block content
 			</div>
 			<div class="col-md-7 col-md-offset-5 byline">
 				-- <a href="http://www.twitter.com/<%= tweet.user.screen_name %>">@<%= tweet.user.screen_name %></a>
+			</div>
+		</div>
+
+	script#instaTemplate(type="text/template").
+		<div class="col-md-2 insta">
+			<div class="row">
+				<div class="col-md-12 user">
+					<i class="fa fa-instagram"></i> <%= item.user.username %>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 img">
+					<img src="<%= item.images.standard_resolution.url %>" class="img-responsive" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 caption">
+					<p> <%= item.caption.text %>
+				</div>
 			</div>
 		</div>
