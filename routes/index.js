@@ -16,4 +16,8 @@ router.get("/robots.txt", function(req, res){
 	}
 });
 
+router.get("/googleb922c62c3db3c863.html", function(req, res){
+	res.send("google-site-verification: googleb922c62c3db3c863.html");
+});
+
 module.exports = router;
