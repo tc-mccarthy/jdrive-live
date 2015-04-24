@@ -5453,6 +5453,10 @@ jdrive = {
 				jdrive.addTweet(post);
 			});
 		});
+	},
+
+	breakHash: function(text){
+		return text.replace(/([^\s])[#]/g, "$1 #");
 	}
 };
 

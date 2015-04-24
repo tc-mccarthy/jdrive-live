@@ -1,6 +1,12 @@
 #tweets{
 	background-color: #FFF;
 	overflow: hidden;
+
+	@include respond-to(handhelds){
+		@include border-radius(10px);
+
+		margin-bottom: 1em;
+	}
 	
 	#tweetContent{
 		.row{

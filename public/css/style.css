@@ -43,11 +43,20 @@ html, body {
   background-color: #FFF;
   overflow: hidden;
 }
-/* line 6, ../../assets/scss/_tweets.scss */
+@media only screen and (max-width: 479px) {
+  /* line 1, ../../assets/scss/_tweets.scss */
+  #tweets {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+  }
+}
+/* line 12, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row {
   height: 90%;
 }
-/* line 9, ../../assets/scss/_tweets.scss */
+/* line 15, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row.tweet {
   margin-bottom: 1em;
   padding: 10px;
