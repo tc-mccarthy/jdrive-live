@@ -41,8 +41,14 @@ jdrive = {
 			jdrive.addTweet(tweet);
 		});
 
+		//load initial instas
 		jdrive.getInstagram();
-		setInterval(jdrive.getInstagram, 30 * 1000);
+		
+		//load initial tweets
+		jdrive.getTweets();
+
+		//reload instas at the refresh rate
+		setInterval(jdrive.getInstagram, (jdrive.refreshRate * 1000));
 	},	
 
 	addTweet: function(tweet){
@@ -69,6 +75,14 @@ jdrive = {
 			jdrive.instaContainer.html("");
 			_.each(data, function(post){
 				jdrive.instaContainer.append(jdrive.instagramTemplate({item: post}));
+			});
+		});
+	},
+
+	getTweets: function(){
+		$.getJSON("/api/twitter", function(data){
+			_.each(_.first(data.statuses, settings.twitter.max), function(post){
+				jdrive.addTweet(post);
 			});
 		});
 	}

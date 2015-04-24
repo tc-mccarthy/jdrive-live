@@ -67,7 +67,6 @@ app.use(function(err, req, res, next) {
 tw.stream("statuses/filter", {"track": config.twitter.hashtag.replace("#", "%23")}, function(s){
     console.log(config.twitter.hashtag);
     s.on("data", function(data){
-        console.log(data);
         io.emit("tweet", JSON.stringify(data));
     });
 

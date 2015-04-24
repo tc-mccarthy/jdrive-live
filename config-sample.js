@@ -15,16 +15,18 @@ exports.config = {
 	  consumer_secret: '',
 	  access_token_key: '',
 	  access_token_secret: '',
-	  hashtag: "#Isles"
+	  hashtag: "#"
 	},
 
 	memcached: {
 		host: 'localhost',
-		port: 11211
+		port: 11211,
+		timeout: 60 //cache life, in seconds
 	},
 
 	instagram: {
 		client_id: '',
-		client_secret: ''
+		client_secret: '',
+		hashtag: "#"
 	}
 };
