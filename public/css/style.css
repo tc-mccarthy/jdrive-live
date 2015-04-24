@@ -7,23 +7,43 @@
 html, body {
   font-size: 16px;
   background-color: #000;
+  padding: 0;
+  margin: 0;
 }
 
-/* line 6, ../../assets/scss/_page.scss */
+/* line 7, ../../assets/scss/_page.scss */
+h1 {
+  padding: 0;
+  margin: 0;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+/* line 8, ../../assets/scss/_page.scss */
+img {
+  border: none;
+}
+
+/* line 9, ../../assets/scss/_page.scss */
 .container {
   width: 95%;
 }
 
-/* line 10, ../../assets/scss/_page.scss */
+/* line 12, ../../assets/scss/_page.scss */
 #banner {
-  background-image: url("/img/banner.jpg");
-  background-size: cover;
-  height: 350px;
-  background-position: 0 -10em;
-  background-repeat: no-repeat;
+  	/*background-image: url("/img/banner.jpg");
+          background-position: 0 -10em;
+  	background-repeat: no-repeat;
+          background-size: cover;
+          height: 350px;
+          */
+  border-top: 4px solid #d11621;
+  background: #000;
+  padding: 12px;
+  margin: 0;
 }
 @media only screen and (max-width: 479px) {
-  /* line 10, ../../assets/scss/_page.scss */
+  /* line 12, ../../assets/scss/_page.scss */
   #banner {
     background-position: 0 0;
     height: 250px;
@@ -40,8 +60,27 @@ html, body {
 /* Styles for clips carousel */
 /* line 1, ../../assets/scss/_tweets.scss */
 #tweets {
+  border: 1px solid #FFF;
   background-color: #FFF;
   overflow: hidden;
+  position: relative;
+}
+/* line 6, ../../assets/scss/_tweets.scss */
+#tweets .twitter-share-button {
+  position: absolute;
+  z-index: 2000;
+  top: 16px;
+  right: 0px;
+  display: inline-block;
+}
+/* line 7, ../../assets/scss/_tweets.scss */
+#tweets h3 {
+  background: #000;
+  border-bottom: 4px solid #d31823;
+  color: #FFF;
+  margin: 0 -15px;
+  padding: 12px;
+  color: #FFF;
 }
 @media only screen and (max-width: 479px) {
   /* line 1, ../../assets/scss/_tweets.scss */
@@ -52,31 +91,43 @@ html, body {
     margin-bottom: 1em;
   }
 }
-/* line 12, ../../assets/scss/_tweets.scss */
+/* line 15, ../../assets/scss/_tweets.scss */
+#tweets #tweetContent a {
+  color: #d31823;
+}
+/* line 16, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row {
   height: 90%;
 }
-/* line 15, ../../assets/scss/_tweets.scss */
+/* line 19, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row.tweet {
   margin-bottom: 1em;
-  padding: 10px;
+  padding: 14px 10px;
   height: 0px;
   opacity: 0;
+  overflow: hidden;
+}
+/* line 25, ../../assets/scss/_tweets.scss */
+#tweets #tweetContent .row.tweet:nth-child(odd) {
+  background: #EFEFEF;
 }
 
 /* Styles for ugc carousel */
 /* line 1, ../../assets/scss/_ugc.scss */
 #ugc {
   text-align: center;
+  clear: both;
+  background: #666;
+  padding: 6px 4px;
 }
-/* line 4, ../../assets/scss/_ugc.scss */
+/* line 6, ../../assets/scss/_ugc.scss */
 #ugc .insta {
   background: #FFF;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  margin-bottom: 1em;
-  margin-right: 1em;
+  border: 6px solid #666;
+  min-height: 320px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
   display: inline-block;
   text-align: left;
 }
@@ -87,6 +138,15 @@ html, body {
 }
 /* line 20, ../../assets/scss/_ugc.scss */
 #ugc .insta .user {
+  font-size: 22px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+/* line 24, ../../assets/scss/_ugc.scss */
+#ugc .insta .user i {
+  color: #bd2025;
+}
+/* line 26, ../../assets/scss/_ugc.scss */
+#ugc .insta img {
+  margin: 0 0 6px;
 }

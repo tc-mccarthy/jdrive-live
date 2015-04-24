@@ -1,7 +1,10 @@
 #tweets{
+        border:1px solid #FFF;
 	background-color: #FFF;
 	overflow: hidden;
-
+        position:relative;
+        .twitter-share-button {position:absolute;z-index:2000;top:16px;right:0px;display:inline-block;}
+        h3 {background:#000;border-bottom:4px solid #d31823;color:#FFF;margin:0 -15px;padding:12px;color:#FFF}
 	@include respond-to(handhelds){
 		@include border-radius(10px);
 
@@ -9,14 +12,17 @@
 	}
 	
 	#tweetContent{
+            a {color:#d31823;}
 		.row{
 			height: 90%;
 
 			&.tweet{
 				margin-bottom: 1em;
-				padding: 10px;
+				padding: 14px 10px;
 				height: 0px;
 				opacity: 0;
+                                overflow:hidden;
+                                &:nth-child(odd) {background: #EFEFEF;}
 			}	
 		}
 	}

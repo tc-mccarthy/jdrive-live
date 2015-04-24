@@ -2,6 +2,8 @@ extends layout
 
 block content
 	div#banner.row
+			h1
+				img(src="/img/roth-regatta-live-header.jpg", alt="Roth Regatta Live")
 		
 	div.container
 				
@@ -9,7 +11,8 @@ block content
 			div#mainVideo.col-lg-9.col-md-12
 				iframe.video(src="http://www.ustream.tv/embed/" + settings.ustream.videoid + "?v=3&amp;wmode=direct&autoplay=true")
 			div#tweets.col-lg-3.col-md-12
-				h3 #{hashtag}
+				h3 <i class="fa fa-twitter"></i> #{hashtag}
+				a.twitter-share-button(href="https://twitter.com/share", data-text="I'm watching @SBUjournalism's live broadcast of the #RothRegatta. #RRL2015") Tweet
 				div#tweetContent
 
 		div#ugc.row

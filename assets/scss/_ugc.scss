@@ -1,25 +1,28 @@
 #ugc{
+    text-align: center;
+    clear:both;
+    background:#666;
+    padding:6px 4px;
+    .insta{
+        background: #FFF;
+        border:6px solid #666;
+        min-height:320px;
+        @include border-radius(0px);
 
-	text-align: center;
-	.insta{
-		background: #FFF;
+        display: inline-block;
+        text-align: left;
 
-		@include border-radius(10px);
+        .caption{
+            height: 120px;
+            overflow: hidden;
+        }
 
-		margin-bottom: 1em;
-		margin-right: 1em;
-
-		display: inline-block;
-		text-align: left;
-
-		.caption{
-			height: 120px;
-			overflow: hidden;
-		}
-
-		.user{
-			margin-top: 5px;
-			margin-bottom: 5px;
-		}
-	}
+        .user{
+            font-size:22px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            i {color:#bd2025;}
+        }
+        img {margin:0 0 6px;}
+    }
 }

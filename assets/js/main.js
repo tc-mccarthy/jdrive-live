@@ -63,7 +63,7 @@ jdrive = {
 		});
 		
 		lastTweet.remove();
-		newTweet.animate({opacity: 1, height: (newHeight * 1.1) + "px"});
+		newTweet.animate({opacity: 1, height: (newHeight * 1.6) + "px"});
 	},
 
 	formatTweet: function(text){

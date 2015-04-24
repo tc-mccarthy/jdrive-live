@@ -3787,6 +3787,7 @@
 
 
 })(jQuery);
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
 //     Underscore.js 1.8.2
 //     http://underscorejs.org
 //     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -5431,7 +5432,7 @@ jdrive = {
 		});
 		
 		lastTweet.remove();
-		newTweet.animate({opacity: 1, height: (newHeight * 1.1) + "px"});
+		newTweet.animate({opacity: 1, height: (newHeight * 1.6) + "px"});
 	},
 
 	formatTweet: function(text){
