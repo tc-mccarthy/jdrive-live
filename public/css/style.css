@@ -10,50 +10,44 @@ html, body {
   padding: 0;
   margin: 0;
 }
-
 /* line 7, ../../assets/scss/_page.scss */
-h1 {
+html h1, body h1 {
   padding: 0;
   margin: 0;
   color: #FFF;
   text-transform: uppercase;
 }
-
-/* line 8, ../../assets/scss/_page.scss */
-img {
+/* line 14, ../../assets/scss/_page.scss */
+html img, body img {
   border: none;
   max-width: 580px;
 }
-
-/* line 9, ../../assets/scss/_page.scss */
-.container {
+/* line 18, ../../assets/scss/_page.scss */
+html .container, body .container {
   width: 95%;
 }
-
-/* line 12, ../../assets/scss/_page.scss */
-#banner {
-  	/*background-image: url("/img/banner.jpg");
-          background-position: 0 -10em;
-  	background-repeat: no-repeat;
-          background-size: cover;
-          height: 350px;
-          */
+/* line 22, ../../assets/scss/_page.scss */
+html #banner, body #banner {
   border-top: 4px solid #d11621;
   background: #000;
   padding: 12px;
   margin: 0;
 }
 @media only screen and (max-width: 479px) {
-  /* line 12, ../../assets/scss/_page.scss */
-  #banner {
+  /* line 22, ../../assets/scss/_page.scss */
+  html #banner, body #banner {
     background-position: 0 0;
   }
 }
 @media (max-width: 590px) {
-  /* line 27, ../../assets/scss/_page.scss */
-  #banner img {
+  /* line 33, ../../assets/scss/_page.scss */
+  html #banner img, body #banner img {
     width: 100%;
   }
+}
+/* line 39, ../../assets/scss/_page.scss */
+html p#description, body p#description {
+  color: #FFF;
 }
 
 /* Pull in video styles */
