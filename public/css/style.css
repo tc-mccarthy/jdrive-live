@@ -71,15 +71,15 @@ img {
   overflow: hidden;
   position: relative;
 }
-/* line 6, ../../assets/scss/_tweets.scss */
+/* line 7, ../../assets/scss/_tweets.scss */
 #tweets .twitter-share-button {
-  position: absolute;
+  position: absolute !important;
   z-index: 2000;
   top: 16px;
-  right: 0px;
+  right: 2em;
   display: inline-block;
 }
-/* line 7, ../../assets/scss/_tweets.scss */
+/* line 15, ../../assets/scss/_tweets.scss */
 #tweets h3 {
   background: #000;
   border-bottom: 4px solid #d31823;
@@ -94,21 +94,21 @@ img {
     margin-bottom: 1em;
   }
 }
-/* line 12, ../../assets/scss/_tweets.scss */
+/* line 29, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent {
   height: 89%;
   overflow-y: auto;
   overflow-x: hidden;
 }
-/* line 16, ../../assets/scss/_tweets.scss */
+/* line 34, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent a {
   color: #d31823;
 }
-/* line 17, ../../assets/scss/_tweets.scss */
+/* line 38, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row {
   height: 90%;
 }
-/* line 20, ../../assets/scss/_tweets.scss */
+/* line 41, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row.tweet {
   margin-bottom: 1em;
   padding: 14px 10px;
@@ -116,7 +116,7 @@ img {
   opacity: 0;
   overflow: hidden;
 }
-/* line 26, ../../assets/scss/_tweets.scss */
+/* line 48, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row.tweet:nth-child(odd) {
   background: #EFEFEF;
 }

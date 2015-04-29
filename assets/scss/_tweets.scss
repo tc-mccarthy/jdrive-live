@@ -1,19 +1,40 @@
 #tweets{
-        border:1px solid #FFF;
+    border:1px solid #FFF;
 	background-color: #FFF;
 	overflow: hidden;
-        position:relative;
-        .twitter-share-button {position:absolute;z-index:2000;top:16px;right:0px;display:inline-block;}
-        h3 {background:#000;border-bottom:4px solid #d31823;color:#FFF;margin:0 -15px;padding:12px;color:#FFF}
+	position:relative;
+        
+    .twitter-share-button {
+    	position:absolute !important;
+    	z-index:2000;
+    	top:16px;
+    	right:2em;
+    	display: inline-block;
+    }
+        
+    h3 {
+    	background:#000;
+    	border-bottom:
+    	4px solid #d31823;
+    	color:#FFF;
+    	margin:0 -15px;
+    	padding:12px;
+    	color:#FFF
+    }
+	
 	@include respond-to(handhelds){
 		margin-bottom: 1em;
 	}
 	
 	#tweetContent{
-            height:89%;
-            overflow-y:auto;
-            overflow-x:hidden;
-            a {color:#d31823;}
+        height:89%;
+        overflow-y:auto;
+        overflow-x:hidden;
+        
+        a {
+        	color:#d31823;
+        }
+		
 		.row{
 			height: 90%;
 
@@ -22,8 +43,11 @@
 				padding: 14px 10px;
 				height: 0px;
 				opacity: 0;
-                                overflow:hidden;
-                                &:nth-child(odd) {background: #EFEFEF;}
+                overflow:hidden;
+                
+                &:nth-child(odd) {
+                	background: #EFEFEF;
+                }
 			}	
 		}
 	}
