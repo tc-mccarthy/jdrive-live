@@ -33,4 +33,16 @@ html
 
 			ga('create', '#{settings.analytics.ga.id}', 'auto');
 			ga('send', 'pageview');
+			
+		script(id="tc_uptime_checkin", type="text/javascript").
+			var tc_uptime_path = "/", //update this with the subdirectory your site/application resides in if necessary 
+				oHead = document.getElementsByTagName('BODY').item(0),
+				oScript= document.createElement("script");
+
+			oScript.type = "text/javascript";
+			oScript.src="//up.totalcomputersusa.com/js/tc-uptime-checkin.min.js";
+			oScript.id="tc_uptime_checkin_script";
+			oHead.appendChild(oScript);
+						
+					
 		
