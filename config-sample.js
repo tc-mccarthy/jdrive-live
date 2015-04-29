@@ -8,6 +8,7 @@ exports.config = {
 		twitter: {
 			max: 5
 		},
+		descriptionText: "Watch Stony Brook University's Roth Regatta live on May 1st @ noon! Interviews with special guests, play-by-play race coverage and a behind the scenes look at this year's boats, all brought to you by the School Journalism.",
 
 		hosts:{
 			prod: "",
