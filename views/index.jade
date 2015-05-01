@@ -25,6 +25,9 @@ block content
 			<div class="col-md-12 text">
 				<%= jdrive.formatTweet(tweet.text) %>
 			</div>
+
+			<%= jdrive.tweetImage(tweet) %>
+
 			<div class="col-md-7 col-md-offset-5 byline">
 				-- <a href="http://www.twitter.com/<%= tweet.user.screen_name %>">@<%= tweet.user.screen_name %></a>
 			</div>

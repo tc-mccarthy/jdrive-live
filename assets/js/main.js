@@ -63,7 +63,9 @@ jdrive = {
 		});
 		
 		lastTweet.remove();
-		newTweet.animate({opacity: 1, height: (newHeight * 1.6) + "px"});
+		newTweet.animate({opacity: 1, height: (newHeight * 1.6) + "px"}, function(){
+			newTweet.css('height', 'auto');
+		});
 	},
 
 	formatTweet: function(text){
@@ -89,6 +91,19 @@ jdrive = {
 
 	breakHash: function(text){
 		return text.replace(/([^\s])[#]/g, "$1 #");
+	},
+
+	tweetImage: function(tweet){
+		console.log(tweet);
+
+		if(typeof tweet.entities.media !== "undefined"){
+			return "<img src='" + tweet.entities.media[0].media_url + "' class='img-responsive' />";
+		}
+		/*if(typeof tweet !== "undefined" && typeof tweet.entities !== "undefined" && typeof tweet.entities.media !== "undefined" && tweet.media.entities.type === "photo"){
+			return "<img src='" + tweet.entities.media[0].media_url + "' class='img-responsive' />";
+		} else{
+			return false;
+		}*/
 	}
 };
 
