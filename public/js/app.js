@@ -5436,7 +5436,7 @@ jdrive = {
 	},
 
 	formatTweet: function(text){
-		return text.replace(/(https?[:]\/\/[A-Za-z0-9.\/]+)/g, "<a href='$1'>$1</a>").replace(/#([A-Za-z0-9]+)/g, "<a href='http://www.twitter.com/hashtag/$1'>#$1</a>").replace(/@([A-Za-z0-9]+)/g, "<a href='http://www.twitter.com/$1'>@$1</a>");
+		return text.replace(/(https?[:]\/\/[A-Za-z0-9._-\/]+)/g, "<a href='$1'>$1</a>").replace(/#([A-Za-z0-9_]+)/g, "<a href='http://www.twitter.com/hashtag/$1'>#$1</a>").replace(/@([A-Za-z0-9_]+)/g, "<a href='http://www.twitter.com/$1'>@$1</a>");
 	},
 
 	getInstagram: function(){
