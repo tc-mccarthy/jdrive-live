@@ -81,6 +81,7 @@ html p#description, body p#description {
   margin: 0 -15px;
   padding: 12px;
   color: #FFF;
+  font-size: 1.2em;
 }
 @media only screen and (max-width: 479px) {
   /* line 1, ../../assets/scss/_tweets.scss */
@@ -88,21 +89,21 @@ html p#description, body p#description {
     margin-bottom: 1em;
   }
 }
-/* line 29, ../../assets/scss/_tweets.scss */
+/* line 30, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent {
   height: 89%;
   overflow-y: auto;
   overflow-x: hidden;
 }
-/* line 34, ../../assets/scss/_tweets.scss */
+/* line 35, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent a {
   color: #d31823;
 }
-/* line 38, ../../assets/scss/_tweets.scss */
+/* line 39, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row {
   height: 90%;
 }
-/* line 41, ../../assets/scss/_tweets.scss */
+/* line 42, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row.tweet {
   margin-bottom: 1em;
   padding: 14px 10px;
@@ -110,7 +111,7 @@ html p#description, body p#description {
   opacity: 0;
   overflow: hidden;
 }
-/* line 48, ../../assets/scss/_tweets.scss */
+/* line 49, ../../assets/scss/_tweets.scss */
 #tweets #tweetContent .row.tweet:nth-child(odd) {
   background: #EFEFEF;
 }

@@ -19,7 +19,8 @@
     	color:#FFF;
     	margin:0 -15px;
     	padding:12px;
-    	color:#FFF
+    	color:#FFF;
+        font-size: 1.2em;
     }
 	
 	@include respond-to(handhelds){
