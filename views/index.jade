@@ -7,14 +7,14 @@ block content
 		
 	div.container
 		div.row
-			p#description.col-md-9.col-md-12 #{settings.descriptionText}
+			p#description.col-md-9.col-md-12 #{content.post_content}
 		
 		div.row
 			div#mainVideo.col-lg-9.col-md-12
-				iframe.video(src="http://www.ustream.tv/embed/" + settings.ustream.videoid + "?v=3&amp;wmode=direct&autoplay=true")
+				iframe.video(src="http://www.ustream.tv/embed/" + content.ustream + "?v=3&amp;wmode=direct&autoplay=true")
 			div#tweets.col-lg-3.col-md-12
-				h3 <i class="fa fa-twitter"></i> #{hashtag}
-				a.twitter-share-button(href="https://twitter.com/share", data-text="I'm watching @SBUjournalism's #RothRegattaLive! #RothRegatta") Tweet
+				h3 <i class="fa fa-twitter"></i> #{content.twitter_hashtag}
+				a.twitter-share-button(href="https://twitter.com/share", data-text=content.tweet_text) Tweet
 				div#tweetContent
 
 		div#ugc.row
