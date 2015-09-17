@@ -27,6 +27,7 @@ router.get("/:slug/", function(req, res){
 
 		function(post, x){
 			content["post_content"] = post.post_content;
+			content["post_title"] = post.post_title;
 			wp.query("SELECT * FROM tc_managed.wp_25_postmeta WHERE post_id = :postID AND (meta_key NOT LIKE \"\\_%\" OR meta_key LIKE \"\\_yoast%\")", {replacements: {postID: post.ID}, type: sequelize.QueryTypes.SELECT }).then(function(a){
 				x(null, a);
 			});
@@ -45,7 +46,6 @@ router.get("/:slug/", function(req, res){
 		if(err){
 			res.send(err);
 		} else{
-			console.log(content);
 			res.render('index', { title: 'Roth Regatta Live 2015', settings: config.app, content: content });
 		}
 	});
