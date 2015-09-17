@@ -16,7 +16,7 @@ router.get("/:slug/", function(req, res){
 	var content = {};
 	async.waterfall([
 		function(x){
-			posts.findOne({where: {post_name: req.params.slug, post_type: 'live_stream', post_status: 'publish'}}).then(function(a){
+			posts.findOne({where: {post_name: req.params.slug, post_type: 'live_show', post_status: 'publish'}}).then(function(a){
 				if(a === null){
 					x(404);
 				} else{
