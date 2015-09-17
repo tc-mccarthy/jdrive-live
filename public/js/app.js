@@ -5436,11 +5436,11 @@ jdrive = {
 	},
 
 	formatTweet: function(text){
-		return text.replace(/(https?[:]\/\/[A-Za-z0-9._-\/]+)/g, "<a href='$1'>$1</a>").replace(/#([A-Za-z0-9_]+)/g, "<a href='http://www.twitter.com/hashtag/$1'>#$1</a>").replace(/@([A-Za-z0-9_]+)/g, "<a href='http://www.twitter.com/$1'>@$1</a>");
+		return text.replace(/(https?[:]\/\/[A-Za-z0-9_\\-\\.\/]+)/g, "<a href='$1'>$1</a>").replace(/#([A-Za-z0-9_]+)/g, "<a href='http://www.twitter.com/hashtag/$1'>#$1</a>").replace(/@([A-Za-z0-9_]+)/g, "<a href='http://www.twitter.com/$1'>@$1</a>");
 	},
 
 	getInstagram: function(){
-		$.getJSON("/api/instagram", function(data){
+		$.getJSON("/api/" + $("div.container").data("slug") + "/instagram", function(data){
 			jdrive.instaContainer.html("");
 			_.each(data, function(post){
 				jdrive.instaContainer.append(jdrive.instagramTemplate({item: post}));
@@ -5449,7 +5449,7 @@ jdrive = {
 	},
 
 	getTweets: function(){
-		$.getJSON("/api/twitter", function(data){
+		$.getJSON("/api/" + $("div.container").data("slug") + "/twitter", function(data){
 			_.each(_.first(data.statuses, settings.twitter.max), function(post){
 				jdrive.addTweet(post);
 			});

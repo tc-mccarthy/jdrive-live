@@ -46,7 +46,7 @@ router.get("/:slug/", function(req, res){
 		if(err){
 			res.send(err);
 		} else{
-			res.render('index', { title: 'Roth Regatta Live 2015', settings: config.app, content: content });
+			res.render('index', { title: 'Roth Regatta Live 2015', settings: config.app, content: content, slug: req.params.slug});
 		}
 	});
 });
