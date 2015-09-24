@@ -14,7 +14,10 @@ html, body {
     img {
         border:none;
         max-width:580px;
-        max-height: 99px;
+
+        &.logo{
+            max-height: 99px;
+        }
     }
 
     .container{
